@@ -24,3 +24,22 @@
         white-space: pre-line;
     }
 }
+
+.comments {
+    .comments-heading {
+        margin-bottom: 0.5rem;
+    }
+
+    .comment {
+        margin-bottom: 1.5em;
+
+        .comment-meta {
+            font-size: 0.8rem;
+            color: lighten($text-color, 30%);
+        }
+
+        .comment-body {
+            white-space: pre-line;
+        }
+    }
+}

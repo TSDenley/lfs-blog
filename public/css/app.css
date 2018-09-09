@@ -210,3 +210,20 @@ textarea {
   white-space: pre-line;
 }
 
+.comments .comments-heading {
+  margin-bottom: 0.5rem;
+}
+
+.comments .comment {
+  margin-bottom: 1.5em;
+}
+
+.comments .comment .comment-meta {
+  font-size: 0.8rem;
+  color: #919090;
+}
+
+.comments .comment .comment-body {
+  white-space: pre-line;
+}
+
