@@ -3,7 +3,7 @@
 @section('content')
     <h2 class="page-title">Create New Post</h2>
 
-    @include('layout.errors')
+    @include('layouts.errors')
 
     <form action="/posts" method="POST" class="create-post-form">
         {{ csrf_field() }}

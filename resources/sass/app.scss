@@ -12,6 +12,9 @@ body {
     font-size: $font-size-base;
     line-height: $line-height-base;
     background-color: $body-bg;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html, body {
@@ -40,6 +43,10 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.site-header {
+    margin-bottom: 2rem;
 }
 
 .main-heading {
