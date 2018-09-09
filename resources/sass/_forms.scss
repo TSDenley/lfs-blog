@@ -1,0 +1,64 @@
+$border-color: #ccc;
+
+.form-focus {
+    &:focus {
+        $focus-color: $indigo;
+        border-color: darken($border-color, 20%);
+        border-color: lighten($focus-color, 20%);
+        box-shadow: 0 0 0 3px rgba($focus-color, 0.2);
+    }
+}
+
+input, textarea, button {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+}
+
+input, textarea {
+    @extend .form-focus;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+// Buttons
+.btn {
+    background-color: #eee;
+    color: $text-color;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ccc;
+        color: #000;
+    }
+}
+
+.btn-default {
+    @extend .btn;
+    @extend .form-focus;
+    border: 1px solid $border-color;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+
+    &:hover {
+        border-color: darken($border-color, 20%);
+    }
+}
+
+.create-new-btn {
+    @extend .btn;
+    @extend .flex-center;
+    border-radius: 50%;
+    line-height: 1;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    width: 1.4em;
+    height: 1.4em;
+
+    .heading & {
+        float: right;
+    }
+}

@@ -1,0 +1,24 @@
+.alert {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+
+    > ul {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.alert-danger {
+    @extend .alert;
+    background-color: lighten($red, 30%);
+    $bd-color: darken($red, 30%);
+    border-color: $bd-color;
+    color: $bd-color;
+}

@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);html {
+  font-size: 20px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fdfef6;
+}
+
+html,
+body {
+  color: #444;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100%;
+  margin: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 200;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+.flex-center,
+.create-new-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-heading {
+  font-size: 3em;
+  text-align: center;
+}
+
+.main-heading a {
+  text-decoration: none;
+  color: #444;
+}
+
+.main-nav {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main-nav a {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-weight: 400;
+  color: #999;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: #000;
+}
+
+.form-focus:focus,
+input:focus,
+textarea:focus,
+.btn-default:focus {
+  border-color: #999999;
+  border-color: #b2bae6;
+  -webkit-box-shadow: 0 0 0 3px rgba(101, 116, 205, 0.2);
+          box-shadow: 0 0 0 3px rgba(101, 116, 205, 0.2);
+}
+
+input,
+textarea,
+button {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.btn,
+.btn-default,
+.create-new-btn {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn-default:hover,
+.create-new-btn:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.btn-default {
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+.btn-default:hover {
+  border-color: #999999;
+}
+
+.create-new-btn {
+  border-radius: 50%;
+  line-height: 1;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.heading .create-new-btn {
+  float: right;
+}
+
+.alert,
+.alert-danger {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+
+.alert > ul:first-child,
+.alert-danger > ul:first-child {
+  margin-top: 0;
+}
+
+.alert > ul:last-child,
+.alert-danger > ul:last-child {
+  margin-bottom: 0;
+}
+
+.alert-danger {
+  background-color: #f5b8b6;
+  border-color: #6b110e;
+  color: #6b110e;
+}
+
+.post {
+  margin-bottom: 1.5rem;
+}
+
+.post .post-title {
+  margin-bottom: 0;
+}
+
+.post .post-meta {
+  font-size: 0.8rem;
+  color: #919090;
+  margin-top: 0;
+}
+
