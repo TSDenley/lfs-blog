@@ -7,7 +7,5 @@
         <p class="post-meta">{{ $post->created_at->format('l, jS F Y \a\t H:i') }}</p>
     </header>
 
-    <div class="post-body">
-        {{ $post->body }}
-    </div>
+    <div class="post-body">{{ $post->body }}</div>
 </article>

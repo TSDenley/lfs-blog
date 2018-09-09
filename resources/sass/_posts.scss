@@ -19,4 +19,8 @@
         color: lighten($text-color, 30%);
         margin-top: 0;
     }
+
+    .post-body {
+        white-space: pre-line;
+    }
 }

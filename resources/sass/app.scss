@@ -30,6 +30,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+hr {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -44,6 +50,15 @@ h1, h2, h3, h4, h5, h6 {
         text-decoration: none;
         color: $text-color;
     }
+}
+
+.heading-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 @import "nav";
