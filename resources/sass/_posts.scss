@@ -3,6 +3,15 @@
 
     .post-title {
         margin-bottom: 0;
+
+        a {
+            color: #222;
+            text-decoration: none;
+
+            &:hover {
+                color: $indigo;
+            }
+        }
     }
 
     .post-meta {
