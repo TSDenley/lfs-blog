@@ -24,26 +24,3 @@
         white-space: pre-line;
     }
 }
-
-.comment-form {
-    margin-bottom: 1.5em;
-}
-
-.comments {
-    .comments-heading {
-        margin-bottom: 0.5rem;
-    }
-
-    .comment {
-        margin-bottom: 1rem;
-
-        .comment-meta {
-            font-size: 0.8rem;
-            color: lighten($text-color, 30%);
-        }
-
-        .comment-body {
-            white-space: pre-line;
-        }
-    }
-}
