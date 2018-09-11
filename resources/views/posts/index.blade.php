@@ -8,7 +8,11 @@
         </a>
     </h2>
 
-    @foreach ($posts as $post)
-        @include('posts.article')
-    @endforeach
+    @if (count($posts))
+        @foreach ($posts as $post)
+            @include('posts.article')
+        @endforeach
+    @else
+        <p><i>No posts</i></p>
+    @endif
 @endsection
