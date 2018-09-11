@@ -42,6 +42,14 @@ hr {
   border-bottom: 1px solid #ccc;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
 .flex-center,
 .create-new-btn {
   display: -webkit-box;
@@ -62,6 +70,7 @@ hr {
 .main-heading {
   font-size: 3em;
   text-align: center;
+  margin-top: 0;
 }
 
 .main-heading a {
@@ -84,12 +93,8 @@ hr {
   margin-bottom: 1.5rem;
 }
 
-.main-nav {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
+.nav-menu a,
+.nav-user a,
 .main-nav a {
   display: inline-block;
   margin-left: 1rem;
@@ -99,8 +104,25 @@ hr {
   text-decoration: none;
 }
 
+.nav-menu a:hover,
+.nav-user a:hover,
 .main-nav a:hover {
   color: #000;
+}
+
+.nav-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main-nav {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-focus:focus,

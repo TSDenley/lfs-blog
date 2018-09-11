@@ -37,6 +37,9 @@ hr {
     border-bottom: 1px solid #ccc;
 }
 
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -50,6 +53,7 @@ hr {
 .main-heading {
     font-size: 3em;
     text-align: center;
+    margin-top: 0;
 
     a {
         text-decoration: none;

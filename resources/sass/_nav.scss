@@ -1,9 +1,4 @@
-
-.main-nav {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
+.nav-menu {
     a {
         display: inline-block;
         margin-left: 1rem;
@@ -16,4 +11,17 @@
             color: #000;
         }
     }
+}
+
+.nav-user {
+    @extend .nav-menu;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav {
+    @extend .nav-menu;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
