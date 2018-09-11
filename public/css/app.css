@@ -125,8 +125,15 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0.25rem 0.5rem;
+  display: block;
   width: 100%;
   max-width: 500px;
+}
+
+label {
+  display: block;
+  max-width: 500px;
+  margin-bottom: 0.1rem;
 }
 
 .btn,
