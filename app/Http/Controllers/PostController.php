@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Post;
 
 class PostController extends Controller {
+    public function __constructor () {
+        $this->middleware('auth')->except([ 'index', 'show' ]);
+    }
+
     public function index () {
         $posts = Post::latest()->get();
         return view('posts.index', [ 'posts' => $posts ]);
