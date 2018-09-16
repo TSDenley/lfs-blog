@@ -32,12 +32,10 @@ label {
 
 // Buttons
 .btn {
-    background-color: #eee;
     color: $text-color;
     cursor: pointer;
 
     &:hover {
-        background-color: #ccc;
         color: #000;
     }
 }
@@ -48,9 +46,11 @@ label {
     border: 1px solid $border-color;
     padding: 0.25rem 0.5rem;
     border-radius: 5px;
+    background-color: #eee;
 
     &:hover {
         border-color: darken($border-color, 20%);
+        background-color: #ccc;
     }
 }
 
@@ -64,4 +64,16 @@ label {
     text-align: center;
     width: 1.4em;
     height: 1.4em;
+}
+
+
+.btn-link {
+    @extend .btn;
+    background-color: transparent;
+    border: none;
+    color: $link-color;
+
+    &:hover {
+        color: $hover-color;
+    }
 }

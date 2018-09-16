@@ -36,6 +36,15 @@ h6:first-child {
   margin-top: 0;
 }
 
+a {
+  color: #999;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
 hr {
   border: none;
   background-color: transparent;
@@ -100,14 +109,6 @@ hr {
   margin-left: 1rem;
   margin-right: 1rem;
   font-weight: 400;
-  color: #999;
-  text-decoration: none;
-}
-
-.nav-menu a:hover,
-.nav-user a:hover,
-.main-nav a:hover {
-  color: #000;
 }
 
 .nav-user {
@@ -160,16 +161,16 @@ label {
 
 .btn,
 .btn-default,
-.create-new-btn {
-  background-color: #eee;
+.create-new-btn,
+.btn-link {
   color: #444;
   cursor: pointer;
 }
 
 .btn:hover,
 .btn-default:hover,
-.create-new-btn:hover {
-  background-color: #ccc;
+.create-new-btn:hover,
+.btn-link:hover {
   color: #000;
 }
 
@@ -177,10 +178,12 @@ label {
   border: 1px solid #ccc;
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
+  background-color: #eee;
 }
 
 .btn-default:hover {
   border-color: #999999;
+  background-color: #ccc;
 }
 
 .create-new-btn {
@@ -191,6 +194,16 @@ label {
   text-align: center;
   width: 1.4em;
   height: 1.4em;
+}
+
+.btn-link {
+  background-color: transparent;
+  border: none;
+  color: #999;
+}
+
+.btn-link:hover {
+  color: #000;
 }
 
 .alert,
