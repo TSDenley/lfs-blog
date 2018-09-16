@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 
 class PostController extends Controller {
-    public function __constructor () {
+    public function __construct () {
         $this->middleware('auth')->except([ 'index', 'show' ]);
     }
 
@@ -32,6 +32,7 @@ class PostController extends Controller {
         Post::create([
             'title' => request()->title,
             'body' => request()->body,
+            'user_id' => auth()->id(),
         ]);
 
         return redirect('/posts');

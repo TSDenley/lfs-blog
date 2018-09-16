@@ -4,7 +4,12 @@
             <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
         </h1>
 
-        <p class="post-meta">{{ $post->created_at->format('l, jS F Y \a\t H:i') }}</p>
+        <p class="post-meta">
+            <span>Posted on</span>
+            <span class="post-date">{{ $post->created_at->format('jS F Y \a\t H:i') }}</span>
+            <span>, by</span>
+            <span class="post-author">{{ $post->user->name }}</span>
+        </p>
     </header>
 
     <div class="post-body">{{ $post->body }}</div>
