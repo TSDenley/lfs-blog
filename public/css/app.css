@@ -189,6 +189,11 @@ label {
   text-align: center;
   width: 1.4em;
   height: 1.4em;
+  background-color: #eee;
+}
+
+.create-new-btn:hover {
+  background-color: #ccc;
 }
 
 .btn-link {
