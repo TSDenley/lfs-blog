@@ -1,4 +1,4 @@
-@extends('layout', [ 'title' => 'Create New Post' ])
+@extends('layouts.layout', [ 'title' => 'Create New Post' ])
 
 @section('content')
     <h2 class="page-title">Create New Post</h2>

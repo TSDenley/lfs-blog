@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout', [ 'title' => 'Login' ])
 
 @section('content')
     <h2>Login</h2>

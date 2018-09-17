@@ -1,4 +1,4 @@
-@extends('layout', [ 'title' => $post->title ])
+@extends('layouts.layout', [ 'title' => $post->title ])
 
 @section('content')
     @include('posts.article')
@@ -8,18 +8,23 @@
 
     @include('layouts.errors')
 
-    <form class="comment-form" action="/posts/{{ $post->id }}/comments" method="post">
-        {{ csrf_field() }}
-        <p><textarea name="body" rows="8" cols="80" placeholder="Post a comment"></textarea></p>
-        <p><button type="submit" class="btn-default">Post</button></p>
-    </form>
+    @if (Auth::check())
+        <form class="comment-form" action="/posts/{{ $post->id }}/comments" method="post">
+            {{ csrf_field() }}
+            <p><textarea name="body" rows="8" cols="80" placeholder="Post a comment"></textarea></p>
+            <p><button type="submit" class="btn-default">Post</button></p>
+        </form>
+    @endif
 
     @if ($post->comments)
         <div class="comments">
             @foreach ($post->comments as $comment)
                 <article class="comment">
                     <div class="comment-meta">
-                        Posted <i>{{ $comment->created_at->diffForHumans() }}</i>
+                        <span>Posted</span>
+                        <span class="comment-posted-on">{{ $comment->created_at->diffForHumans() }}</span>
+                        <span>by</span>
+                        <span class="comment-author">{{ $comment->user->name }}</span>
                     </div>
                     <div class="comment-body">{{ $comment->body }}</div>
                 </article>

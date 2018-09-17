@@ -1,4 +1,4 @@
-@extends('layout', [ 'title' => 'Posts' ])
+@extends('layouts.layout-aside', [ 'title' => 'Posts' ])
 
 @section('content')
     <h2 class="page-title heading-actions">
@@ -16,5 +16,16 @@
         @endforeach
     @else
         <p><i>No posts</i></p>
+    @endif
+@endsection
+
+@section('aside')
+    @if ($archives)
+        <h3 class="aside-title">Post Archive</h3>
+        <ul>
+            @foreach ($archives as $archive)
+                <li>{{ $archive->month }} {{ $archive->year }}</li>
+            @endforeach
+        </ul>
     @endif
 @endsection
