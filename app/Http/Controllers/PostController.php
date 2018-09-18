@@ -17,10 +17,7 @@ class PostController extends Controller {
             ->get();
 
         // Monthly post archives for aside
-        $archives = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) published')
-            ->groupBy('year', 'month')
-            ->orderByRaw('min(created_at) desc')
-            ->get();
+        $archives = Post::archives();
 
         return view('posts.index', [
             'posts' => $posts,

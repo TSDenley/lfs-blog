@@ -23,15 +23,20 @@ class Post extends Model {
         ]);
     }
 
-    public function scopeFilter ($query, $filters) {
-        if (isset($filters['month']) && isset($filters['year'])) {
-            if ($month = $filters['month']) {
-                $query->whereMonth('created_at', Carbon::parse($month)->month);
-            }
+    public static function archives () {
+        return static::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) published')
+            ->groupBy('year', 'month')
+            ->orderByRaw('min(created_at) desc')
+            ->get();
+    }
 
-            if ($year = $filters['year']) {
-                $query->whereYear('created_at', Carbon::parse($year)->year);
-            }
+    public function scopeFilter ($query, $filters) {
+        if (isset($filters['month'])) {
+            $query->whereMonth('created_at', Carbon::parse($filters['month'])->month);
+        }
+
+        if (isset($filters['year'])) {
+            $query->whereYear('created_at', Carbon::parse($filters['year'])->year);
         }
     }
 }
