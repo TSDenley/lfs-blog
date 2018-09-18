@@ -2,7 +2,12 @@
 
 @section('content')
     <h2 class="page-title heading-actions">
-        Latest Posts
+        @if (isset($month) && isset($year))
+            Posts from {{ $month }} {{ $year }}
+        @else
+            Latest Posts
+        @endif
+
         @if (Auth::check())
             <a href="/posts/create" class="create-new-btn" title="Create new post">
                 <span>+</span>

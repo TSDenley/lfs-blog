@@ -25,6 +25,8 @@ class PostController extends Controller {
         return view('posts.index', [
             'posts' => $posts,
             'archives' => $archives,
+            'month' => request('month'),
+            'year' => request('year'),
         ]);
     }
 
