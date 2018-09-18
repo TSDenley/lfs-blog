@@ -1,4 +1,4 @@
-@extends('layouts.layout', [ 'title' => $post->title ])
+@extends('layouts.layout-aside', [ 'title' => $post->title ])
 
 @section('content')
     @include('posts.article')
@@ -31,4 +31,8 @@
             @endforeach
         </div>
     @endif
+@endsection
+
+@section('aside')
+    @include('posts.monthly-archive')
 @endsection

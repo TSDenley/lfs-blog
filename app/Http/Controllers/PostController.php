@@ -16,12 +16,8 @@ class PostController extends Controller {
             ->filter(request([ 'month', 'year' ]))
             ->get();
 
-        // Monthly post archives for aside
-        $archives = Post::archives();
-
         return view('posts.index', [
             'posts' => $posts,
-            'archives' => $archives,
             'month' => request('month'),
             'year' => request('year'),
         ]);
