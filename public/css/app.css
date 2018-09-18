@@ -340,3 +340,8 @@ label {
   white-space: pre-line;
 }
 
+.comments .comment + .comment {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+

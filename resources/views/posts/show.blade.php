@@ -11,7 +11,7 @@
     @if (Auth::check())
         <form class="comment-form" action="/posts/{{ $post->id }}/comments" method="post">
             {{ csrf_field() }}
-            <p><textarea name="body" rows="8" cols="80" placeholder="Post a comment"></textarea></p>
+            <p><textarea name="body" rows="8" cols="80" maxlength="255" placeholder="Post a comment"></textarea></p>
             <p><button type="submit" class="btn-default">Post</button></p>
         </form>
     @endif

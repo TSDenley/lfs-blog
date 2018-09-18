@@ -18,5 +18,10 @@
         .comment-body {
             white-space: pre-line;
         }
+
+        + .comment {
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
     }
 }
