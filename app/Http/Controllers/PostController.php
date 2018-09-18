@@ -11,10 +11,15 @@ class PostController extends Controller {
     }
 
     public function index () {
-        $posts = Post::latest()->get();
+        // All post, filtered by archive filters if present
+        $posts = Post::latest()
+            ->filter(request([ 'month', 'year' ]))
+            ->get();
 
+        // Monthly post archives for aside
         $archives = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) published')
             ->groupBy('year', 'month')
+            ->orderByRaw('min(created_at) desc')
             ->get();
 
         return view('posts.index', [

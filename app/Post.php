@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Post extends Model {
     protected $fillable = [ 'title', 'body', 'user_id' ];
@@ -20,5 +21,17 @@ class Post extends Model {
             'body' => $body,
             'user_id' => auth()->id(),
         ]);
+    }
+
+    public function scopeFilter ($query, $filters) {
+        if (isset($filters['month']) && isset($filters['year'])) {
+            if ($month = $filters['month']) {
+                $query->whereMonth('created_at', Carbon::parse($month)->month);
+            }
+
+            if ($year = $filters['year']) {
+                $query->whereYear('created_at', Carbon::parse($year)->year);
+            }
+        }
     }
 }
