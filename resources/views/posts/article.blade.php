@@ -13,4 +13,12 @@
     </header>
 
     <div class="post-body">{{ $post->body }}</div>
+
+    @if (count($post->tags))
+        <div class="post-tags">
+            @foreach ($post->tags as $tag)
+                <a href="/posts/tags/{{ $tag->name }}">#{{ $tag->name }}</a>
+            @endforeach
+        </div>
+    @endif
 </article>

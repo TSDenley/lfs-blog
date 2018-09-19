@@ -22,6 +22,8 @@ Route::get('/posts', 'PostController@index');
 
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 
+Route::get('/posts/tags/{tag}', 'TagsController@index');
+
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 

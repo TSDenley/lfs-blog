@@ -4,6 +4,8 @@
     <h2 class="page-title heading-actions">
         @if (isset($month) && isset($year))
             Posts from {{ $month }} {{ $year }}
+        @elseif (isset($postTagName))
+            Posts tagged with: {{ $postTagName }}
         @else
             Latest Posts
         @endif

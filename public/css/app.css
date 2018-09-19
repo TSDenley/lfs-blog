@@ -337,6 +337,10 @@ label {
   white-space: pre-line;
 }
 
+.post .post-tags {
+  margin-top: 1rem;
+}
+
 .post-footer {
   margin-bottom: 1.5rem;
 }
