@@ -39,4 +39,8 @@ class Post extends Model {
             $query->whereYear('created_at', Carbon::parse($filters['year'])->year);
         }
     }
+
+    public function tags () {
+        return $this->belongsToMany(Tag::class);
+    }
 }
