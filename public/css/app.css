@@ -311,7 +311,7 @@ label {
 }
 
 .post {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .post .post-title {
@@ -335,6 +335,10 @@ label {
 
 .post .post-body {
   white-space: pre-line;
+}
+
+.post-footer {
+  margin-bottom: 1.5rem;
 }
 
 .comment-form {

@@ -18,6 +18,15 @@
     @if (count($posts))
         @foreach ($posts as $post)
             @include('posts.article')
+
+            <footer class="post-footer">
+                <a href="/posts/{{ $post->id }}#comments">
+                    @if ($commentsCount = count($post->comments))
+                        {{ $commentsCount }} comments |
+                    @endif
+                    {{ Auth::check() ? 'Leave a comment' : 'View comments' }}
+                </a>
+            </footer>
         @endforeach
     @else
         <p><i>No posts</i></p>
