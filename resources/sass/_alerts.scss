@@ -15,10 +15,24 @@
     }
 }
 
-.alert-danger {
-    @extend .alert;
-    background-color: lighten($red, 30%);
-    $bd-color: darken($red, 30%);
+@mixin alert-color($color: $grey) {
+    background-color: lighten($color, 30%);
+    $bd-color: darken($color, 30%);
     border-color: $bd-color;
     color: $bd-color;
+}
+
+.alert-danger {
+    @extend .alert;
+    @include alert-color($red);
+}
+
+.alert-success {
+    @extend .alert;
+    @include alert-color($green);
+}
+
+.alert-info {
+    @extend .alert;
+    @include alert-color($blue);
 }
