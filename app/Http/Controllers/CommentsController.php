@@ -13,6 +13,8 @@ class CommentsController extends Controller {
 
         $post->addComment(request('body'));
 
+        session()->flash('message', 'Comment published.');
+
         return back();
     }
 }
