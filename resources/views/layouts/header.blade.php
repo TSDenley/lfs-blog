@@ -2,4 +2,5 @@
     @include('layouts.nav-user')
     <h1 class="main-heading"><a href="/">Blog</a></h1>
     @include('layouts.nav')
+    @include('layouts.messages')
 </header>
