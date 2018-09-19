@@ -30,6 +30,8 @@ class RegistrationController extends Controller {
 
         auth()->login($user);
 
+        session()->flash('message', 'Thank you for signing up, you may now publish posts and comments. Happy blogging!');
+
         // Email the user
         \Mail::to($user)->send(new Welcome($user));
 
