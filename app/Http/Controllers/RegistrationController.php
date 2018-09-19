@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use Illuminate\Support\Facades\Hash;
 
-class RegistrationController extends Controller
-{
+use App\Mail\Welcome;
+use App\User;
+
+class RegistrationController extends Controller {
+
     public function create () {
         return view('registration.create');
     }
@@ -28,6 +30,10 @@ class RegistrationController extends Controller
 
         auth()->login($user);
 
+        // Email the user
+        \Mail::to($user)->send(new Welcome($user));
+
         return redirect('/');
     }
+
 }
