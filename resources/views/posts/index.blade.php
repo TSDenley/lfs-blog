@@ -36,5 +36,7 @@
 @endsection
 
 @section('aside')
-    @include('posts.monthly-archive')
+    @if (count($posts))
+      @include('posts.monthly-archive')
+    @endif
 @endsection
